@@ -1,0 +1,21 @@
+{
+  "type": "module",
+  "name": "js",
+  "module": "react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "add-employee.js",
+  "scripts": {
+    "start": "add-employee.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^18.2.0",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "g-sheets-api": "^2.2.0"
+  }
+}

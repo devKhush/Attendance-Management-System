@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Attendence Management System</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="employee.css" />
+    <!-- Fontawesome CDN Link -->
+    <link rel="icon" type="image/x-icon" href="https://1000logos.net/wp-content/uploads/2021/07/Jio-Logo-768x483.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+</head>
+
+<body>
+    <nav class="sidebar">
+        <div class="profile">
+            <img src="data:image/png;base64,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"
+                alt="profile_picture" />
+            <h3 class="logo">Reliance Jio</h3>
+        </div>
+
+        <div class="menu-content">
+            <ul class="menu-items">
+                <li class="item">
+                    <a href="#home" class="active">
+                        <span class="icon"><i class="fas fa-home"></i></span>
+                        <span class="item">Home</span>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="#add-employee">
+                        <span class="icon"><i class="fas fa-user-friends"></i></span>
+                        <span class="item">Add employee</span>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="#add-attendence">
+                        <span class="icon"><i class="fas fa-user-shield"></i></span>
+                        <span class="item">Add Attendence</span>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="#show-attendence">
+                        <span class="icon"><i class="fas fa-database"></i></span>
+                        <span class="item">Show Attendence</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <nav class="navbar">
+        <i class="fa-solid fa-bars" id="sidebar-close"></i>
+    </nav>
+
+
+    <section class="main-content" id="home">
+        <h1>Attendence Management System</h1>
+    </section>
+
+
+    <section class="main-content" id="add-employee">
+        <div>
+            <h2>Add Employee</h2>
+            <form action="#" class="form" id="add-employee-form" name="add-employee-form">
+                <div class="input-field">
+                    <label for="employeeId">Employee ID:</label>
+                    <input type="text" id="employeeId" placeholder="e.g. 101" name="emp_id" required />
+                </div>
+                <div class="input-field">
+                    <label for="employeeName">Employee Name:</label>
+                    <input type="text" id="employeeName" placeholder="Name" name="emp_name" required />
+                </div>
+                <div class="input-field">
+                    <label for="managerId">Manager ID:</label>
+                    <input type="text" id="managerId" placeholder="Manager ID" name="manager_id" required />
+                </div>
+                <button type="submit" id="add-employee-submit-btn" class="submit-button">Submit</button>
+            </form>
+        </div>
+    </section>
+
+
+    <section class="main-content" id="add-attendence">
+        <div>
+            <h2>Add Employee Attendence</h2>
+            <form action="#" class="form" id="add-employee-attendence-form" name="add-employee-attendence-form">
+                <div class="input-field">
+                    <label for="employeeIdAttendence">Employee ID:</label>
+                    <input type="text" id="employeeIdAttendence" placeholder="e.g. 101" name="emp_id" required />
+                </div>
+                <div class="input-field">
+                    <label for="date">Date</label>
+                    <input type="text" id="date" placeholder="dd/mm/yy" name="day" required />
+                </div>
+                <div class="input-field">
+                    <label for="punchIn">Punch-in Time:</label>
+                    <input type="text" id="punchIn" placeholder="hh:mm:ss" name="punch_in" required />
+                </div>
+                <div class="input-field">
+                    <label for="punchOut">Punch-out Time:</label>
+                    <input type="text" id="punchOut" placeholder="hh:mm:ss" name="punch_out" required />
+                </div>
+                <button type="submit" class="submit-button">Submit</button>
+            </form>
+        </div>
+    </section>
+
+
+    <section class="main-content" id="show-attendence">
+        <div>
+            <h2>Show Employee Attendance</h2>
+            <form action="#" class="form" id="show-attendance-form">
+                <div class="input-field">
+                    <label for="employeeSelect">Select Employee:</label>
+                    <select id="employeeSelect" name="emp_id" required></select>
+                </div>
+                <button type="submit" class="submit-button">Show Attendance</button>
+            </form>
+
+            <div id="show-attendence-table-container">
+                <table id="show-attendence-table">
+                </table>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script type="module" src="./script.js"></script>
+    <script type="module" src="./employee.js"></script>
+    <script type="module" src="./attendence.js"></script>
+    <script type="module" src="./show-options.js"></script>
+    <script type="module" src="./show-attendence.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+.main-content h2 {
+    margin: 0px;
+    padding: 0px;
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section {
+    padding: 30px 50px;
+}
+
+#show-attendence-table {
+    margin: 40px 40px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 20px 50px;
+}
+
+
+#show-attendence {
+    height: auto;
+    overflow-y: auto;
+}
+
+
+.form .input-field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px 5px;
+}
+
+label {
+    font-weight: bold;
+}
+
+
+input[type="text"],
+input[type="date"],
+input[type="datetime"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button[type="submit"] {
+    margin: 20px 5px;
+    padding: 8px 12px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #3c8940;
+}
+
+td {
+    padding: 10px 10px;
+    font-size: small;
+}
+
+.green-row {
+    background-color: #c9f9c9;
+    /* Light green */
+}
+
+.red-row {
+    background-color: #f9c9c9;
+    /* Light red */
+}
